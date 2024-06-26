@@ -28,7 +28,7 @@ body {
 }
 
 .padded {
-    @apply px-32;
+    @apply px-3 lg:px-32;
 }
 
 @layer utilities {

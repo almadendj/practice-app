@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col justify-start items-center">
       <div className="w-full min-h-8 py-3 text-white px-3 flex flex-row items-center justify-between sticky padded z-10">
-        <Image src={logo} alt="logo" />
-        <div className="flex-grow flex-row items-center flex text-white font-bold justify-end space-x-6 uppercase">
+        <Image className="w-[180px] lg:w-max" src={logo} alt="logo" />
+        <div className="flex-grow flex-row items-center text-white font-bold justify-end space-x-6 uppercase hidden lg:flex">
           <HeaderItem>Home</HeaderItem>
           <HeaderItem>About</HeaderItem>
           <HeaderItem>Location</HeaderItem>
@@ -27,17 +27,18 @@ export default function Home() {
       </div>
       <div
         className={
-          "-mt-20 flex flex-col justify-center items-start text-white w-full h-[550px] padded " +
+          "-mt-20 flex flex-col justify-center items-center lg:items-start text-white w-full h-[550px] padded " +
           rubikFont.className
         }
         style={{
           backgroundImage: `url(${header.src})`,
           backgroundSize: "cover",
           backgroundPositionY: "bottom",
+          backgroundPositionX: "center",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <span className="font-bold text-[75px]">
+        <span className="font-bold text-3xl sm:text-5xl lg:text-7xl text-center lg:text-left">
           FIGHT LIKE
           <br />
           A&nbsp;<span className="text-red-500">CHAMPION</span>
